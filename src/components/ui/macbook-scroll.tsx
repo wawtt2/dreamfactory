@@ -173,7 +173,6 @@ export const Lid = ({
                 <BackgroundGradient className="h-96 rounded-lg">
                     <video
                         src={src as string}
-                        alt="example video"
                         fill
                         controls
 

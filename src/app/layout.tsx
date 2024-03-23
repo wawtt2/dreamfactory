@@ -15,8 +15,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+      <html lang="en">
       <body className={inter.className}>{children}</body>
-    </html>
+      <head>
+        <title>DreamFactory</title>
+        <link rel="icon" type="image/png" href="/icon.png"/>
+      </head>
+      </html>
   );
 }
