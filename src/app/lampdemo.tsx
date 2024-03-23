@@ -14,20 +14,20 @@ export function LampDemo() {
                     duration: 0.8,
                     ease: "easeInOut",
                 }}
-                className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
+                className="font-extrabold mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl text-transparent md:text-7xl"
             >
                 Idea of Dream Factory
                 <br/>
-                <div className=" text-center justify-center items-center flex">
+                <div className="font-light text-center justify-center items-center flex">
                     <div className="w-1/6">
-                        <div className="tracking-widest" style={{fontSize: '2.5vw'}}>|Automatic|</div>
+                        <div className="font-bold" style={{fontSize: '2.5vw'}}>|Automatic|</div>
                         <br/>
                         <div style={{fontSize: '1.6vw'}}>&quot;Your idea, a click
                             away from the full film&quot;
                         </div>
                     </div>
                     <div className="m-24 w-1/6">
-                        <div className="tracking-widest" style={{fontSize: '2.5vw'}}>|Powerful|
+                        <div className="font-bold" style={{fontSize: '2.5vw'}}>|Powerful|
                         </div>
                         <br/>
                         <div style={{fontSize: '1.6vw'}}>&quot;Top-tier film crew
@@ -35,7 +35,7 @@ export function LampDemo() {
                         </div>
                     </div>
                     <div className=" w-1/6">
-                        <div className="tracking-widest" style={{fontSize: '2.5vw'}}>|Practical|
+                        <div className="font-bold" style={{fontSize: '2.5vw'}}>|Practical|
                         </div>
                         <br/>
                         <div style={{fontSize: '1.6vw'}}>&quot;Available anytime,

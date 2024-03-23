@@ -1,5 +1,4 @@
 import Image from "next/image";
-import {color} from "framer-motion";
 
 export default function TopBar() {
     return (

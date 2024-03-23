@@ -1,15 +1,10 @@
-import Image from "next/image";
-import {GoogleGeminiEffectDemo} from "@/app/test";
 import {HeroParallaxDemo} from "@/app/heroparallaxdemo";
-import {NavbarDemo} from "@/app/navbardemo";
-import {TypewriterEffectSmoothDemo} from "@/app/typewritterdemo";
 import {ParallaxScrollDemo} from "@/app/parallax-scroll-demo";
 import TopBar from "@/app/TopBarDemo";
 import {LampDemo} from "@/app/lampdemo";
-import {StickyScrollRevealDemo} from "@/app/stickyscrolldemo";
-
-import { motion } from "framer-motion";
 import Gallery from "@/app/gallery";
+import {SparklesPreview} from "@/app/sparklesdemo";
+import {MacbookScrollDemo} from "@/app/macbookdemo";
 
 export default function Home() {
     return (
@@ -17,7 +12,8 @@ export default function Home() {
             <TopBar/>
             <HeroParallaxDemo/>
             <LampDemo/>
-            <Gallery/>
+            <MacbookScrollDemo/>
+            <SparklesPreview/>
             <ParallaxScrollDemo/>
         </main>
 );

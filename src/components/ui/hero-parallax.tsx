@@ -8,7 +8,6 @@ import {
     MotionValue,
 } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 import {TypewriterEffectSmooth} from "@/components/ui/typewriter-effect";
 
 export const HeroParallax = ({
@@ -114,16 +113,16 @@ export const Header = () => {
         },
         {
             text: "Long",
-            className: "text-blue-500 dark:text-blue-500",
+            className: "text-blue-500",
         },
         {
             text: "Video.",
-            className: "text-blue-500 dark:text-blue-500",
+            className: "text-blue-500",
         },
     ];
 
     return (
-        <div className=" text-white relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
+        <div className=" text-white relative mx-auto py-20 md:py-40 px-4 w-full left-24 top-0">
             <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
                 DreamFactory
                 <TypewriterEffectSmooth words={words} />
@@ -142,7 +141,6 @@ export const ProductCard = ({
                             }: {
     product: {
         title: string;
-        link: string;
         thumbnail: string;
     };
     translate: MotionValue<number>;
