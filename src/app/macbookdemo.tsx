@@ -16,7 +16,6 @@ export function MacbookScrollDemo() {
                         also directed by DreamFactory
                     </span>
                 }
-                src={`/output/temp.mp4`}
                 showGradient={false}
             />
         </div>
