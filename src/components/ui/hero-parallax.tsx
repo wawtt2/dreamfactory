@@ -9,6 +9,9 @@ import {
 } from "framer-motion";
 import Image from "next/image";
 import {TypewriterEffectSmooth} from "@/components/ui/typewriter-effect";
+import {Button} from "@/components/ui/button";
+import { MoveUpRight, Github } from 'lucide-react';
+import Link from "next/link";
 
 export const HeroParallax = ({
                                  products,
@@ -124,19 +127,36 @@ export const Header = () => {
     return (
         <div className="select-none pointer-events-none text-white relative mx-auto py-20 md:py-40 px-4 w-full left-24 top-0 z-50">
             <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
-                DreamFactory
+                <div className="tracking-tighter">
+                    DreamFactory
+                </div>
+
                 <TypewriterEffectSmooth words={words} />
             </h1>
 
-            <p className="max-w-2xl font-extralight text-white md:text-xl mt-8">
+            <p className="max-w-2xl font-extralight text-white md:text-xl mt-6">
                 Dream Factory is an automatic framework for multi-scene long video synthesis.
                 It is also a framework which are based on Collaborative LLM GPTs-based Agents so Customize Your Own Art Company Now.
             </p>
-            <div className="max-w-2xl font-medium text-white md:text-xl mt-8 flex">
-                <div className="font-bold">
-                    Scroll down&nbsp;
-                </div>
-                 and some works of our framework are shown here!
+            <div className="flex mt-8 pointer-events-auto select-auto">
+                <Button
+                    className="border-blue-500 border-[3px]  bg-blue-500 hover:bg-blue-50 font-medium text-white hover:text-blue-500 text-sm"
+                    asChild
+                >
+                    <Link href="/about">
+                        About Us
+                        <MoveUpRight className="scale-75" style={{marginRight: "-0.6rem"}}/>
+                    </Link>
+                </Button>
+                <Button
+                    className="border-[3px] border-zinc-900 hover:bg-zinc-50 bg-zinc-900 font-medium hover:text-zinc-900 text-white ml-8 text-sm"
+                    asChild
+                >
+                    <Link href="https://github.com/dreamfactory24/DreamFactory/">
+                        See in Github
+                        <Github className="scale-75 ml-0.5" style={{marginRight: "-0.6rem"}}/>
+                    </Link>
+                </Button>
             </div>
         </div>
     );

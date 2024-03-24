@@ -7,10 +7,9 @@ export default function Paper() {
         <div className="bg-slate-950">
 
             <TopBar/>
-                <div className="py-32">
-                    <TracingBeamDemo/>
-
-                </div>
+            <div className="py-32">
+                <TracingBeamDemo/>
+            </div>
         </div>
 
     )

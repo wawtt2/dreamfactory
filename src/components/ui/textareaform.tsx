@@ -27,11 +27,11 @@ const FormSchema = z.object({
     }),
     advice: z
         .string()
-        .min(6, {
-            message: "advice must be at least 6 characters.",
+        .min(5, {
+            message: "Advice must be at least 5 characters.",
         })
-        .max(160, {
-            message: "advice must not be longer than 30 characters.",
+        .max(2000, {
+            message: "Advice must not be longer than 2000 characters.",
         }),
 })
 
@@ -94,13 +94,13 @@ export default function ProfileForm() {
                                 <FormItem>
                                     <FormLabel>Advice</FormLabel>
                                     <FormControl>
-                                        <Textarea className="resize-none" {...field} />
+                                        <Textarea placeholder="Write down anything you want and send to us!" className="" {...field} />
                                     </FormControl>
                                     <FormMessage/>
                                 </FormItem>
                             )}
                         />
-                        <Button variant="outline" type="submit">Submit</Button>
+                        <Button variant="default" type="submit">Done</Button>
                     </form>
                 </Form>
             </DialogContent>

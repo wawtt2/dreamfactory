@@ -16,7 +16,7 @@ export default function TopBar() {
                         <Image src="/icon.png" alt="icon" width={100} height={100} priority={true}/>
                     </div>
                     <div className="flex flex-col">
-                        <h1 className="text-white dark:text-white">DreamFactory</h1>
+                        <h1 className="text-white tracking-tighter">DreamFactory</h1>
                     </div>
                 </a>
             </div>
@@ -34,11 +34,7 @@ export default function TopBar() {
                 <a
                     className="text-white hidden sm:block hover:scale-110 hover:text-blue-500 transition-all"
                     href="/about">About</a>
-                <a
-                    className="hover:cursor-pointer text-white hidden sm:block hover:scale-110 hover:text-blue-500 transition-all"
-                >
-                    <ProfileForm/>
-                </a>
+
                 <a
                     className="text-white hidden sm:block hover:scale-110 hover:text-blue-500 transition-all"
                     href="https://github.com/dreamfactory24/DreamFactory/">
@@ -49,11 +45,18 @@ export default function TopBar() {
                     href="/paper">
                     Paper
                 </a>
-
+                <a
+                className="hover:cursor-pointer text-white hidden sm:block hover:scale-110 hover:text-blue-500 transition-all"
+                >
+                    <ProfileForm/>
+                </a>
             </nav>
-            <div className="hidden md:flex items-center right-6 fixed">
-                <Image className="m-2 hover:scale-125 transition-transform" src="/Tsinghua_University_Logo.svg" alt="TsingHua" width={35} height={35} priority={true}/>
-                <Image className="m-2 hover:scale-125 transition-transform" src="/University_of_Luxembourg.svg" alt="Luxembourg" width={35} height={35} priority={true}/>
+
+
+            <div className="hidden md:flex items-center right-16 fixed">
+                <Image className="m-3 hover:scale-125 transition-transform" src="/Tsinghua_University_Logo.svg"
+                       alt="TsingHua" width={35} height={35} priority={true}/>
+                <Image className="m-3 hover:scale-125 transition-transform" src="/University_of_Luxembourg.svg" alt="Luxembourg" width={35} height={35} priority={true}/>
             </div>
         </div>
 

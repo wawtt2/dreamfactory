@@ -10,7 +10,7 @@ export function TracingBeamDemo() {
             <div className="text-white max-w-3xl mx-auto antialiased pt-4 relative">
                 {dummyContent.map((item, index) => (
                     <div key={`content-${index}`} className="mb-10">
-                        <h1 className="text-white font-bold text-6xl px-2 py-6" >
+                        <h1 className="text-white font-bold font-serif text-5xl px-2 py-6" >
                             {item.header}
                         </h1>
                         <h2 className="bg-white text-black rounded-full text-sm w-fit px-4 py-1 mb-4">
