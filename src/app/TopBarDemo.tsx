@@ -1,6 +1,10 @@
 import Image from "next/image";
+import ProfileForm from "@/components/ui/textareaform";
+import {motion} from "framer-motion";
+
 
 export default function TopBar() {
+
     return (
         <div className="text-white fixed flex h-16 w-screen items-center z-50 bg-slate-950 backdrop-blur-2xl bg-opacity-50">
             <div className="ml-10 mr-4 hidden md:flex">
@@ -8,8 +12,8 @@ export default function TopBar() {
                     className="flex items-center justify-center space-x-2 text-2xl font-bold py-6 text-center text-neutral-600 dark:text-gray-100 selection:bg-emerald-500 mr-10"
                     href="/">
                     <div
-                        className="relative h-8 w-8 md:h-6 md:w-6 border border-white text-white flex items-center justify-center rounded-md text-sm antialiased">
-                        <Image src="/icon.png" alt="icon" width={100} height={100}/>
+                        className="relative h-8 w-8 md:h-6 md:w-6 bg-white border border-white text-white flex items-center justify-center rounded-md text-sm antialiased">
+                        <Image src="/icon.png" alt="icon" width={100} height={100} priority={true}/>
                     </div>
                     <div className="flex flex-col">
                         <h1 className="text-white dark:text-white">DreamFactory</h1>
@@ -23,23 +27,33 @@ export default function TopBar() {
                data-state="closed" href="/">
                 <div
                     className="relative h-8 w-8 md:h-6 md:w-6 border border-white text-white flex items-center justify-center rounded-md text-sm antialiased">
-                    <Image src="/icon.png" alt="icon" width={100} height={100}/>
+                    <Image src="/icon.png" alt="icon" width={100} height={100} priority={true}/>
                 </div>
             </a>
-            <nav className="flex items-center space-x-6 text-sm font-medium xl:flex">
+            <nav className="flex items-center space-x-8  font-medium xl:flex">
                 <a
-                    className="transition-colors hover:text-foreground/80 text-foreground/60 hidden sm:block"
+                    className="text-white hidden sm:block hover:scale-110 hover:text-blue-500 transition-all"
                     href="/about">About</a>
                 <a
-                    className="transition-colors hover:text-foreground/80 text-foreground/60 hidden sm:block"
-                    href="/pricing">Contact</a>
+                    className="hover:cursor-pointer text-white hidden sm:block hover:scale-110 hover:text-blue-500 transition-all"
+                >
+                    <ProfileForm/>
+                </a>
                 <a
-                    className="transition-colors hover:text-foreground/80 text-foreground/60 hidden sm:block"
-                    href="https://github.com/dreamfactory24/DreamFactory/">Github</a>
+                    className="text-white hidden sm:block hover:scale-110 hover:text-blue-500 transition-all"
+                    href="https://github.com/dreamfactory24/DreamFactory/">
+                    Github
+                </a>
+                <a
+                    className="text-white hidden sm:block hover:scale-110 hover:text-blue-500 transition-all"
+                    href="/paper">
+                    Paper
+                </a>
+
             </nav>
             <div className="hidden md:flex items-center right-6 fixed">
-                <Image className="m-2" src="/Tsinghua_University_Logo.svg" alt="TsingHua" width={35} height={35}/>
-                <Image className="m-2" src="/University_of_Luxembourg.svg" alt="Luxembourg" width={35} height={35}/>
+                <Image className="m-2 hover:scale-125 transition-transform" src="/Tsinghua_University_Logo.svg" alt="TsingHua" width={35} height={35} priority={true}/>
+                <Image className="m-2 hover:scale-125 transition-transform" src="/University_of_Luxembourg.svg" alt="Luxembourg" width={35} height={35} priority={true}/>
             </div>
         </div>
 

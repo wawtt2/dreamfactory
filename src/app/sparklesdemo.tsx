@@ -15,7 +15,7 @@ export function SparklesPreview() {
                     duration: 0.8,
                     ease: "easeInOut",
                 }}
-                className="absolute md:text-7xl text-3xl lg:text-7xl font-bold text-center text-white z-20">
+                className="select-none pointer-events-none absolute md:text-7xl text-3xl lg:text-7xl font-bold text-center text-white z-20">
                 GALLERY
             </motion.h1>
             <div className="w-[40rem] h-40 relative">

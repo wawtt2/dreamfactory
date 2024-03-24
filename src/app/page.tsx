@@ -5,6 +5,7 @@ import {LampDemo} from "@/app/lampdemo";
 import Gallery from "@/app/gallery";
 import {SparklesPreview} from "@/app/sparklesdemo";
 import {MacbookScrollDemo} from "@/app/macbookdemo";
+import ProfileForm from "@/components/ui/textareaform";
 
 export default function Home() {
     return (
@@ -16,5 +17,5 @@ export default function Home() {
             <SparklesPreview/>
             <ParallaxScrollDemo/>
         </main>
-);
+    );
 }

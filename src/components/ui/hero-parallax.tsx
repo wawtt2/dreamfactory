@@ -77,7 +77,7 @@ export const HeroParallax = ({
                         />
                     ))}
                 </motion.div>
-                <motion.div className="flex flex-row  mb-20 space-x-20 ">
+                <motion.div className="flex flex-row mb-20 space-x-20 ">
                     {secondRow.map((product) => (
                         <ProductCard
                             product={product}
@@ -122,15 +122,22 @@ export const Header = () => {
     ];
 
     return (
-        <div className=" text-white relative mx-auto py-20 md:py-40 px-4 w-full left-24 top-0">
+        <div className="select-none pointer-events-none text-white relative mx-auto py-20 md:py-40 px-4 w-full left-24 top-0 z-50">
             <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
                 DreamFactory
                 <TypewriterEffectSmooth words={words} />
             </h1>
-            <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
+
+            <p className="max-w-2xl font-extralight text-white md:text-xl mt-8">
                 Dream Factory is an automatic framework for multi-scene long video synthesis.
                 It is also a framework which are based on Collaborative LLM GPTs-based Agents so Customize Your Own Art Company Now.
             </p>
+            <div className="max-w-2xl font-medium text-white md:text-xl mt-8 flex">
+                <div className="font-bold">
+                    Scroll down&nbsp;
+                </div>
+                 and some works of our framework are shown here!
+            </div>
         </div>
     );
 };
@@ -160,7 +167,7 @@ export const ProductCard = ({
                 src={product.thumbnail}
                 height="600"
                 width="600"
-                className="object-cover object-left-top absolute h-full w-full inset-0"
+                className="object-cover rounded-lg object-left-top absolute h-full w-full inset-0"
                 alt={product.title}
             />
             <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-30 bg-black pointer-events-none"></div>

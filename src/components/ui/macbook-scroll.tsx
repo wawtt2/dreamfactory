@@ -27,11 +27,9 @@ import Image from "next/image";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 
 export const MacbookScroll = ({
-                                  src,
                                   showGradient,
                                   title,
                               }: {
-    src?: string;
     showGradient?: boolean;
     title?: string | React.ReactNode;
 }) => {
@@ -82,10 +80,10 @@ export const MacbookScroll = ({
                     opacity: textOpacity,
                     // textShadow: '0 0 5px white'
                 }}
-                className=" flex text-white text-7xl font-bold mb-20 text-center"
+                className=" flex text-white text-4xl font-bold mb-5 text-center"
             >
                 {title || (
-                    <span>
+                    <span className="select-none pointer-events-none ">
                         Feel the energy of
                         <div className="text-blue-500">
                             Dream Factory
@@ -95,7 +93,6 @@ export const MacbookScroll = ({
             </motion.h2>
             {/* Lid */}
             <Lid
-                src={src}
                 scaleX={scaleX}
                 scaleY={scaleY}
                 rotate={rotate}
@@ -133,13 +130,11 @@ export const Lid = ({
                         scaleY,
                         rotate,
                         translate,
-                        src,
                     }: {
     scaleX: MotionValue<number>;
     scaleY: MotionValue<number>;
     rotate: MotionValue<number>;
     translate: MotionValue<number>;
-    src?: string;
 }) => {
     return (
         <div className="relative [perspective:800px]">
@@ -172,10 +167,8 @@ export const Lid = ({
             >
                 <BackgroundGradient className="h-96 rounded-lg">
                     <video
-                        src={src as string}
-                        fill
+                        src="/temp.mp4"
                         controls
-
                         className="object-cover absolute rounded-lg inset-0 h-full w-full"
                     />
                 </BackgroundGradient>
